@@ -44,6 +44,5 @@ jobs:
           use-mamba: true
 
       - name: Install JVM (using mamba)
-        if: ${{ matrix.jdk_from == 'mamba' }}
         shell: bash -l {0}
         run: mamba install 'openjdk>=11,<12'  # it’s about this here
