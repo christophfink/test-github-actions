@@ -44,7 +44,7 @@ jobs:
           use-mamba: true
 
       - name: Install JVM (using mamba)
-        shell: bash -l {0}
+        #shell: bash -l {0}  # is default, why is it overridden?
         run: |
           #which conda
           conda info
