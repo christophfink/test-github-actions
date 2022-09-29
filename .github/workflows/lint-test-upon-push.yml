@@ -46,5 +46,7 @@ jobs:
       - name: Install JVM (using mamba)
         shell: bash -l {0}
         run: |
+          which conda
+          conda install 'openjdk>=11,<12'
           which mamba
           mamba install 'openjdk>=11,<12'
