@@ -37,7 +37,7 @@ jobs:
 
       - name: Try something
         shell: bash
-        runs: |
+        run: |
             for tag in $(git tag):
                 mkdir -p "/tmp/html/${tag}"
                 git checkout tag
