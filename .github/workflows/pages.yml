@@ -38,7 +38,7 @@ jobs:
       - name: Try something
         shell: bash
         run: |
-            for tag in $(git tag):
+            for tag in $(git tag); do
                 mkdir -p "/tmp/html/${tag}"
                 git checkout tag
                 cp -Rfv ./ "/tmp/html/${tag}"
