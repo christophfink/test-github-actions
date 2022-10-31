@@ -43,7 +43,7 @@ jobs:
             git tag
             for tag in $(git tag); do
                 mkdir -pv "/tmp/html/${tag}"
-                git checkout tag
+                git checkout "${tag}"
                 cp -Rfv ./ "/tmp/html/${tag}"
             done
 
