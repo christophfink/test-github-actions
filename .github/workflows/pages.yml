@@ -34,12 +34,15 @@ jobs:
             submodules: true
       - name: Setup Pages
         uses: actions/configure-pages@v2
+        with:
+            fetch-depth: 0
 
       - name: Try something
         shell: bash
         run: |
+            git tag
             for tag in $(git tag); do
-                mkdir -p "/tmp/html/${tag}"
+                mkdir -pv "/tmp/html/${tag}"
                 git checkout tag
                 cp -Rfv ./ "/tmp/html/${tag}"
             done
